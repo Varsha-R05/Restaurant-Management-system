@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Management - Food Items</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Restaurant Admin</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Food Items</a></li>
+                <li><a href="customers.html">Customers</a></li>
+                <li><a href="employees.html">Employees</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="fooditems" class="module">
+            <h2>Food Item Management</h2>
+            <div class="controls">
+                <button id="add-fooditem-btn">Add New Food Item</button>
+            </div>
+            <div id="add-fooditem-form" style="display: none;">
+                <form id="new-fooditem-form">
+                <label for="food-name">Name:</label>
+                <input type="text" id="food-name" name="name" required><br>
+
+                <label for="food-category">Category:</label>
+                <select id="food-category" name="category" required>
+                    <option value="appetizer">Appetizer</option>
+                    <option value="main-course">Main Course</option>
+                    <option value="dessert">Dessert</option>
+                    <option value="beverage">Beverage</option>
+                </select><br><br>
+
+                <label for="food-price">Price:</label>
+                <input type="number" id="food-price" name="price" required><br>
+
+                <label for="food-description">Description:</label>
+                <textarea id="food-description" name="description" required></textarea><br>
+
+                <button type="submit">Add Food Item</button>
+                <button type="button" id="cancel-add-fooditem">Cancel</button>
+            </form>
+
+            </div>
+            
+            <table id="fooditem-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>            
+        </section>
+
+        <section id="orders" class="module">
+            <h2>Order Management</h2>
+            <form id="place-order-form">
+                <label for="customer-id">Customer ID:</label>
+                <input type="number" id="customer-id" required>
+
+                <label for="employee-id">Employee ID:</label>
+                <input type="number" id="employee-id" required>
+
+                <label for="order-items">Select Food Item:</label>
+                <select id="order-items" required></select>
+
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" value="1" min="1" required>
+
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method">
+                    <option value="Cash">Cash</option>
+                    <option value="Card">Card</option>
+                </select>
+
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Restaurant Management System
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

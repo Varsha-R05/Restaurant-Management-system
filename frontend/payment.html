@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Restaurant Management - Payment</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <div class="logo">Restaurant Admin</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Food Items</a></li>
+        <li><a href="customers.html">Customers</a></li>
+        <li><a href="employees.html">Employees</a></li>
+        <li><a href="payment.html" class="active">Payment</a></li>
+        <li><a href="inventory.html">Inventory</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="payment" class="module">
+      <h2>Payment History</h2>
+      <div class="payment-list">
+        <table id="payments-table">
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Payment Method</th>
+              <th>Amount Paid</th>
+              <th>Payment Date</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Restaurant Management System
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

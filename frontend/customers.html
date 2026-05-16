@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Management - Customers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Restaurant Admin</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Food Items</a></li>
+                <li><a href="customers.html" class="active">Customers</a></li>
+                <li><a href="employees.html">Employees</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="customers" class="module">
+            <h2>Customer Management</h2>
+            <div class="controls">
+                <button id="add-customer-btn">Add New Customer</button>
+            </div>
+            <div id="add-customer-form" style="display: none;">
+                <form id="new-customer-form">
+                    <label for="customer-name">Name:</label>
+                    <input type="text" id="customer-name" required><br>
+            
+                    <label for="customer-phone">Phone Number:</label>
+                    <input type="text" id="customer-phone" maxlength="10" required><br>
+            
+                    <label for="customer-email">Email:</label>
+                    <input type="email" id="customer-email" required><br>
+            
+                    <button type="submit">Add Customer</button>
+                    <button type="button" id="cancel-add-customer">Cancel</button>
+                </form>
+            </div>
+            
+            <table id="customer-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>            
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Restaurant Management System
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
